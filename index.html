@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramudu Photography | Wedding Photography</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sticky Header (White Theme) -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <div class="brand">
+                <a href="#" class="logo">Ramudu Photography</a>
+                <span class="tagline">Wedding Photography</span>
+            </div>
+
+            <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#" class="nav-link active">Home</a></li>
+                    <li><a href="#" class="nav-link">Wedding Cinema</a></li>
+                    <li><a href="#" class="nav-link">Portfolio</a></li>
+                    <li><a href="#" class="nav-link">About Us</a></li>
+                    <li><a href="#" class="nav-link">Buy Photo Albums</a></li>
+                    <li><a href="#" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content (Hero Carousel) -->
+    <main>
+        <section class="hero-carousel">
+            
+            <div class="slide active">
+                <img src="images/img1.jpg" alt="Wedding Couple 1">
+                <div class="overlay"></div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Timeless Elegance</h2>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="images/img2.jpg" alt="Wedding Couple 2">
+                <div class="overlay"></div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Capturing Pure Emotion</h2>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="images/img3.jpg" alt="Traditional Wedding">
+                <div class="overlay"></div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Cinematic Storytelling</h2>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="images/img4.jpg" alt="Wedding Reception">
+                <div class="overlay"></div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Memories to Cherish forever</h2>
+                </div>
+            </div>
+
+            <button class="carousel-btn prev-btn" id="prev-btn" aria-label="Previous Slide">&#10094;</button>
+            <button class="carousel-btn next-btn" id="next-btn" aria-label="Next Slide">&#10095;</button>
+
+            <div class="carousel-dots" id="dots-container">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
+            </div>
+            
+        </section>
+    </main>
+
+    <!-- Floating Elements -->
+    <a href="https://wa.me/1234567890" class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contact on WhatsApp">
+        <svg viewBox="0 0 32 32" width="28" height="28" fill="white"><path d="M16 2a13 13 0 0 0-10.8 20.3l-2.2 6.5 6.7-2.1A13 13 0 1 0 16 2zm0 24a11 11 0 0 1-5.6-1.5l-.4-.2-4.2 1.3 1.3-4.1-.3-.4A11 11 0 1 1 16 26zm6-8.2c-.3-.2-2-.1-2.3-.1-.3 0-.4 0-.6.3l-1 1.2c-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.7-1.6-1-1-1.7-2.1-1.9-2.4-.2-.3 0-.4.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4-.1-.6-.2-.3-.8-2-.1-2.1.2 0 .5 0 .7 0 .2 0 .5.1.7.4.5.7 1.2 2 1.2 3.1s-.4 2.1-.8 2.6c-.4.4-.8.9-1.2 1.3-.2.2-.5.5-.3.8 1.4 2.3 3.1 3.2 4.2 3.7.3.1.6.1.8-.1l1.1-1.3c.2-.3.5-.4.8-.2z"/></svg>
+    </a>
+
+    <div class="floating-google-review">
+        <div class="review-content">
+            <span class="google-g">G</span>
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+            <span class="rating-text">4.7 on Google</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
