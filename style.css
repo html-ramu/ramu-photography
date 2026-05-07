@@ -9,6 +9,7 @@
     
     --font-heading: 'Playfair Display', serif;
     --font-telugu: 'Sree Krushnadevaraya', serif;
+    --font-tagline: 'Oswald', sans-serif; /* Changed to Oswald */
     --font-body: 'Montserrat', sans-serif;
     --transition-smooth: all 0.4s ease-in-out;
 }
@@ -67,15 +68,17 @@ a {
     font-weight: normal; 
     color: var(--color-dark);
     letter-spacing: 0.5px;
-    line-height: 1.3; /* Adjusted for Telugu breathing room */
+    line-height: 1.3; 
 }
 
 .tagline {
-    font-size: 0.65rem; 
+    font-family: var(--font-tagline);
+    font-size: 0.7rem; /* Slightly larger to support Oswald's condensed nature */
+    font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #666;
-    margin-top: 5px; /* Increased desktop spacing */
+    letter-spacing: 0.5px; 
+    color: #333; /* Darkened from #666 for better visibility */
+    margin-top: 5px; 
 }
 
 .nav-list {
@@ -336,15 +339,14 @@ a {
     
     .header-container { padding: 12px 20px; }
     
-    /* Telugu font mobile sizing fix */
     .logo {
         font-size: 1.6rem;
     }
     
     .tagline {
-        font-size: 0.55rem;
-        letter-spacing: 1px;
-        margin-top: 10px; /* Increased mobile spacing */
+        font-size: 0.6rem;
+        letter-spacing: 0.5px; 
+        margin-top: 8px; 
     }
 
     .nav-menu {
