@@ -410,7 +410,7 @@ a {
    ========================================= */
 .contact-section {
     padding: 100px 5%;
-    background-color: var(--color-white); /* Soft contrast against About Us */
+    background-color: var(--color-white); 
     color: var(--color-dark);
     animation: smoothFadeIn 1.5s ease-out forwards;
 }
@@ -442,7 +442,6 @@ a {
     text-decoration: none;
 }
 
-/* Clickable cards hover effect */
 a.contact-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0,0,0,0.08);
@@ -499,6 +498,68 @@ a.contact-card:hover p {
 }
 
 /* =========================================
+   Testimonials Section
+   ========================================= */
+.testimonials-section {
+    padding: 100px 5%;
+    background-color: var(--color-light); 
+    color: var(--color-dark);
+    animation: smoothFadeIn 1.5s ease-out forwards;
+}
+
+.testimonials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.testimonial-card {
+    background: var(--color-white);
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.testimonial-card .stars {
+    color: #FBBC05;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.testimonial-text {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    font-style: italic;
+    flex-grow: 1; /* Ensures client names align at the bottom if text lengths vary */
+}
+
+.client-name {
+    font-family: var(--font-tagline);
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* =========================================
    Floating Elements
    ========================================= */
 .floating-whatsapp {
@@ -521,7 +582,8 @@ a.contact-card:hover p {
     transform: scale(1.15) translateY(-5px);
 }
 
-.floating-google-review {
+/* Updated Floating Badge */
+.floating-review-badge {
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -534,7 +596,7 @@ a.contact-card:hover p {
     transition: transform 0.3s ease;
 }
 
-.floating-google-review:hover {
+.floating-review-badge:hover {
     transform: translateY(-5px);
 }
 
@@ -542,13 +604,6 @@ a.contact-card:hover p {
     display: flex;
     align-items: center;
     gap: 10px;
-}
-
-.google-g {
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-    color: #4285F4;
-    font-size: 1.2rem;
 }
 
 .stars {
@@ -687,6 +742,20 @@ a.contact-card:hover p {
         padding: 15px 20px;
     }
 
+    /* Mobile adjustments for Testimonials */
+    .testimonials-section {
+        padding: 60px 5%;
+    }
+
+    .testimonials-grid {
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .testimonial-card {
+        padding: 30px 20px;
+    }
+
     /* Floating buttons tweaks */
     .floating-whatsapp { 
         bottom: 25px; 
@@ -695,7 +764,7 @@ a.contact-card:hover p {
         height: 50px; 
     }
     
-    .floating-google-review { 
+    .floating-review-badge { 
         bottom: 25px; 
         right: 15px; 
         padding: 8px 12px; 
