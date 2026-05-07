@@ -9,7 +9,7 @@
     
     --font-heading: 'Playfair Display', serif;
     --font-telugu: 'Sree Krushnadevaraya', serif;
-    --font-tagline: 'Oswald', sans-serif; /* Changed to Oswald */
+    --font-tagline: 'Oswald', sans-serif;
     --font-body: 'Montserrat', sans-serif;
     --transition-smooth: all 0.4s ease-in-out;
 }
@@ -73,11 +73,11 @@ a {
 
 .tagline {
     font-family: var(--font-tagline);
-    font-size: 0.7rem; /* Slightly larger to support Oswald's condensed nature */
+    font-size: 0.7rem; 
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5px; 
-    color: #333; /* Darkened from #666 for better visibility */
+    color: #333; 
     margin-top: 5px; 
 }
 
@@ -137,7 +137,7 @@ a {
 }
 
 /* =========================================
-   Hero Carousel (Desktop Default)
+   Hero Carousel
    ========================================= */
 .hero-carousel {
     position: relative;
@@ -260,6 +260,151 @@ a {
     background: var(--color-primary);
     transform: scale(1.3);
 }
+
+/* =========================================
+   About Us Section
+   ========================================= */
+.about-section {
+    padding: 100px 5%;
+    background-color: var(--color-light); 
+    color: var(--color-dark);
+    animation: smoothFadeIn 1.5s ease-out forwards;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Mobile-first: Image on top */
+    gap: 50px;
+    align-items: center;
+}
+
+.about-image-wrapper {
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px; 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15); 
+    object-fit: cover;
+    aspect-ratio: 4/5;
+}
+
+.about-content {
+    width: 100%;
+    max-width: 600px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--color-dark);
+}
+
+.title-underline {
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-primary);
+    margin: 0 auto;
+}
+
+.about-text {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.about-text strong {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.about-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.stat-box {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-family: var(--font-tagline);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #777;
+    margin-top: 5px;
+    display: block;
+}
+
+@keyframes smoothFadeIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Desktop Layout Overrides --- */
+@media (min-width: 992px) {
+    .about-container {
+        flex-direction: row; /* Desktop: Image left, Text right */
+        justify-content: space-between;
+        align-items: center;
+        gap: 80px;
+    }
+
+    .about-image-wrapper {
+        width: 45%;
+        max-width: none;
+    }
+
+    .about-content {
+        width: 55%;
+        max-width: none;
+    }
+
+    .section-header.left-align {
+        text-align: left;
+    }
+
+    .section-header.left-align .title-underline {
+        margin: 0;
+    }
+
+    .about-text {
+        text-align: left;
+    }
+
+    .about-stats {
+        justify-content: flex-start;
+    }
+}
+
 
 /* =========================================
    Floating Elements
@@ -407,6 +552,27 @@ a {
     .next-btn { right: 10px; }
     
     .carousel-dots { bottom: 30px; }
+
+    /* Mobile adjustments for About Us */
+    .about-section {
+        padding: 60px 5%;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .about-text {
+        font-size: 0.95rem;
+    }
+
+    .about-stats {
+        gap: 20px;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
 
     .floating-whatsapp { 
         bottom: 25px; 
